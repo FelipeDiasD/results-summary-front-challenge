@@ -1,0 +1,242 @@
+/*-Variables-*/
+:root {
+
+    --primary-light-red: hsl(0, 100%, 67%, 0.3);
+    --primary-light-red-stronger: hsl(0, 100%, 67%);
+
+    --primary-orangey-yellow: hsl(39, 100%, 56%, 0.3);
+    --primary-orangey-yellow-stronger: hsl(39, 100%, 56%);
+
+    --primary-green-teal: hsl(166, 100%, 37%, 0.3);
+    --primary-green-teal-stronger: hsl(166, 100%, 37%);
+
+    --primary-cobalt-blue: hsl(234, 85%, 45%, 0.3);
+    --primary-cobalt-blue-stronger: hsl(234, 85%, 45%);
+
+    --gradient-bg-light-slate-blue: hsl(252, 100%, 67%, 0.9);
+    --gradient-bg-Light-royal-blue: hsl(241, 81%, 54%);
+
+    --gradient-circle-violet-blue: hsla(256, 72%, 46%, 1);
+    --gradient-circle-persian-blue: hsla(241, 72%, 46%, 0);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-pale-blue: hsl(221, 100%, 96%);
+    --neutral-light-lavender: hsl(241, 100%, 89%, 0.2);
+    --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+
+}
+
+/*-Body and general-*/
+body {
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+
+
+    font-family: 'Hanken Grotesk', sans-serif;
+
+    font-size: 18px;
+
+}
+
+body h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-Results left card -*/
+.results {
+    background-image: linear-gradient(360deg, var(--gradient-bg-Light-royal-blue), var(--gradient-bg-light-slate-blue));
+
+    width: 300px;
+    height: 400px;
+    padding: 40px;
+    border-radius: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.results h1,
+h2,
+h3,
+h4 {
+    color: var(--neutral-white);
+}
+
+.results h3 {
+    opacity: 0.8;
+}
+
+.results h4 {
+    opacity: 0.8;
+    font-weight: 100;
+}
+
+
+.score {
+
+    background-image: linear-gradient(var(--gradient-circle-violet-blue), var(--gradient-circle-persian-blue));
+    height: 200px;
+    clip-path: circle(80px);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#scored-points {
+    color: var(--neutral-white);
+    margin: 0;
+    font-size: 50px;
+}
+
+#scored-total {
+    color: var(--neutral-white);
+    margin: 0;
+    opacity: 0.8;
+}
+
+/*-Summary right card -*/
+.summary {
+
+    width: 300px;
+    height: 400px;
+    padding: 40px;
+    border-radius: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+    box-shadow: 0px 0px 10px 10px var(--neutral-light-lavender);
+
+}
+
+.summary h2 {
+    color: var(--neutral-dark-gray-blue);
+    position: relative;
+    top: 0;
+    align-self: flex-start;
+
+
+}
+.all-stats{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+.stat {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 300px;
+    padding: 10px;
+    margin: 12px;
+    border-radius: 5px;
+
+
+
+}
+.stat div{
+    display: flex;
+    align-items: center;
+}
+.stat div i{
+    
+    margin-right: 10px;
+    top: 2.5px;
+    padding: 0;
+
+    position: relative;  
+    align-self: start;
+  
+}
+
+#reaction-stat {
+    background-color: var(--primary-light-red);
+    
+}
+
+#reaction-stat h4{
+    color: var(--primary-light-red-stronger);
+    
+}
+
+#memory-stat {
+    background-color: var(--primary-orangey-yellow);
+}
+
+
+#memory-stat h4{
+    color: var(--primary-orangey-yellow-stronger);
+    
+}
+
+#visual-stat {
+    background-color: var(--primary-cobalt-blue);
+}
+
+#visual-stat h4{
+    color: var(--primary-cobalt-blue-stronger);
+    
+}
+
+#verbal-stat {
+    background-color: var(--primary-green-teal);
+}
+
+#verbal-stat h4{
+    color: var(--primary-green-teal-stronger);
+    
+}
+
+.button {
+
+    background-color: var(--neutral-dark-gray-blue);
+    color: var(--neutral-white);
+
+    padding: 15px;
+    border-radius: 30px;
+    width: 300px;
+
+    text-align: center;
+    text-decoration: none;
+   
+}
+
+.button:hover{
+    background-image: linear-gradient(var(--gradient-bg-Light-royal-blue), var(--gradient-bg-light-slate-blue));
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
