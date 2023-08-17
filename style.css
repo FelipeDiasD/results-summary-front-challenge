@@ -1,6 +1,5 @@
-
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 /*-Variables-*/
@@ -67,7 +66,7 @@ main {
 
     width: 400px;
     height: 500px;
-    padding-inline: 65px;    
+    padding-inline: 65px;
     padding-block: 55px;
     border-radius: 35px;
 
@@ -84,7 +83,7 @@ h4 {
     color: var(--neutral-white);
 }
 
-.results h2 {
+#your-result {
     opacity: 0.8;
 }
 
@@ -132,7 +131,7 @@ h4 {
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    
+
 
 
     box-shadow: 0px 0px 10px 10px var(--neutral-light-lavender);
@@ -146,7 +145,8 @@ h4 {
 
 
 }
-.all-stats{
+
+.all-stats {
 
     width: 300px;
 
@@ -156,6 +156,7 @@ h4 {
     align-items: center;
 
 }
+
 .stat {
 
     display: flex;
@@ -170,29 +171,31 @@ h4 {
 
 
 }
-.stat div{
+
+.stat div {
     display: flex;
     align-items: center;
 }
-.stat div img{
-    
+
+.stat div img {
+
     margin-right: 10px;
     top: 2.5px;
     padding: 0;
 
-    position: relative;  
+    position: relative;
     align-self: start;
-  
+
 }
 
 #reaction-stat {
     background-color: var(--primary-light-red);
-    
+
 }
 
-#reaction-stat h4{
+#reaction-stat h4 {
     color: var(--primary-light-red-stronger);
-    
+
 }
 
 #memory-stat {
@@ -200,27 +203,27 @@ h4 {
 }
 
 
-#memory-stat h4{
+#memory-stat h4 {
     color: var(--primary-orangey-yellow-stronger);
-    
+
 }
 
 #visual-stat {
     background-color: var(--primary-cobalt-blue);
 }
 
-#visual-stat h4{
+#visual-stat h4 {
     color: var(--primary-cobalt-blue-stronger);
-    
+
 }
 
 #verbal-stat {
     background-color: var(--primary-green-teal);
 }
 
-#verbal-stat h4{
+#verbal-stat h4 {
     color: var(--primary-green-teal-stronger);
-    
+
 }
 
 .button {
@@ -228,18 +231,18 @@ h4 {
     background-color: var(--neutral-dark-gray-blue);
     color: var(--neutral-white);
 
+    margin-top: 20px;
     padding-block: 10px;
     border-radius: 30px;
-    
     width: 250px;
 
     text-align: center;
     text-decoration: none;
 
-   
+
 }
 
-.button:hover{
+.button:hover {
     background-image: linear-gradient(var(--gradient-bg-Light-royal-blue), var(--gradient-bg-light-slate-blue));
 }
 
@@ -256,23 +259,25 @@ h4 {
 
 @media screen and (max-width:768px) {
 
-    main{
-        
+    main {
+
         flex-direction: column;
         padding: 0;
-    
+
     }
 
     .results {
         width: fit-content;
     }
-    .summary{
+
+    .summary {
         width: 100%;
     }
-    .summary h2{
+
+    .summary h2 {
         align-self: center;
     }
 
 
- 
+
 }
