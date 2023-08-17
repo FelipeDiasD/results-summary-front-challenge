@@ -44,8 +44,6 @@ Users should be able to:
 - CSS media queries
 - Flexbox
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 In this little project I was able to remind and pratice some basic HTML and CSS functionalities. Also, was good to write and pratice a little bit of javascript, revisiting how you could manipulate the DOM. First time using CSS media query and learning how this feature works towards responsiveness.
@@ -55,28 +53,28 @@ One of the things I was having some trouble with, was: "How I would get that jso
 ```js
 async function transferDatafromJson() {
 
-    const receivedJson = await fetch("data.json").then(response => response.json())
+  const receivedJson = await fetch("data.json").then(response => response.json())
 
-    const categoriesId = {
-        Reaction: "reaction-stat",
-        Memory: "memory-stat",
-        Verbal: "verbal-stat",
-        Visual: "visual-stat",
-    }
+  const categoriesId = {
+    Reaction: "reaction-stat",
+    Memory: "memory-stat",
+    Verbal: "verbal-stat",
+    Visual: "visual-stat",
+  }
 
-    for(let i = 0; i < receivedJson.length; i++){
+  for (let i = 0; i < receivedJson.length; i++) {
 
-    
 
-        let actualCategory = receivedJson[i].category
-        let actualScore = receivedJson[i].score
-        let actualIcon = receivedJson[i].icon    
 
-        
-        
-        
-        document.getElementById(categoriesId[actualCategory]).innerHTML =  
-        ` <div>
+    let actualCategory = receivedJson[i].category
+    let actualScore = receivedJson[i].score
+    let actualIcon = receivedJson[i].icon
+
+
+
+
+    document.getElementById(categoriesId[actualCategory]).innerHTML =
+      ` <div>
             <img src=${actualIcon}>
             <h4>
               ${actualCategory}
@@ -84,11 +82,13 @@ async function transferDatafromJson() {
 
           </div>
           <div>
-          </div>
           ${actualScore} / 100
+          </div>
+          
         </div>
-        `  
-    }
+        `
+  }
+
 }
 ```
 
@@ -104,5 +104,5 @@ On future projects or challenges, I want to keep working not only with bare HTML
 ## Author
 
 - LinkedIn - [Felipe Dias](https://www.linkedin.com/in/felipe-dsprado/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Github - [@yourusername](https://github.com/FelipeDiasD)
+- Frontend Mentor - [FelipeDiasD](https://www.frontendmentor.io/profile/FelipeDiasD)
+- Github - [FelipeDiasD](https://github.com/FelipeDiasD)
