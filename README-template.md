@@ -52,32 +52,54 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS media queries
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this little project I was able to remind and pratice some basic HTML and CSS functionalities. Also, was good to write and pratice a little bit of javascript, revisiting how you could manipulate the DOM. 
+One of the things I was having some trouble with, was: "How I would get that json file with the required data to fill in the HTML?". The obvious answer was: "with javascript, of course", but still didn't know how exactly. I stumbled with the fetch method and promisses, and remembered how I could capture that data. Then I upgrade it to an async function and it worked! Maybe a little 
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+async function transferDatafromJson() {
+
+    const receivedJson = await fetch("data.json").then(response => response.json())
+
+    const categoriesId = {
+        Reaction: "reaction-stat",
+        Memory: "memory-stat",
+        Verbal: "verbal-stat",
+        Visual: "visual-stat",
+    }
+
+    for(let i = 0; i < receivedJson.length; i++){
+
+    
+
+        let actualCategory = receivedJson[i].category
+        let actualScore = receivedJson[i].score
+        let actualIcon = receivedJson[i].icon    
+
+        
+        
+        
+        document.getElementById(categoriesId[actualCategory]).innerHTML =  
+        ` <div>
+            <img src=${actualIcon}>
+            <h4>
+              ${actualCategory}
+            </h4>
+
+          </div>
+          <div>
+          </div>
+          ${actualScore} / 100
+        </div>
+        `  
+    }
 }
 ```
 

@@ -1,3 +1,8 @@
+
+* {
+    box-sizing:border-box;
+}
+
 /*-Variables-*/
 :root {
 
@@ -29,7 +34,6 @@
 
 /*-Body and general-*/
 body {
-    width: 1440px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -61,9 +65,10 @@ main {
 .results {
     background-image: linear-gradient(360deg, var(--gradient-bg-Light-royal-blue), var(--gradient-bg-light-slate-blue));
 
-    width: 300px;
-    height: 400px;
-    padding: 40px;
+    width: 400px;
+    height: 500px;
+    padding-inline: 65px;    
+    padding-block: 55px;
     border-radius: 35px;
 
     display: flex;
@@ -79,7 +84,7 @@ h4 {
     color: var(--neutral-white);
 }
 
-.results h3 {
+.results h2 {
     opacity: 0.8;
 }
 
@@ -117,13 +122,14 @@ h4 {
 /*-Summary right card -*/
 .summary {
 
-    width: 300px;
-    height: 400px;
-    padding: 40px;
+    width: 400px;
+    height: 500px;
+    padding-inline: 50px;
+    padding-top: 10px;
     border-radius: 35px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     
@@ -135,16 +141,19 @@ h4 {
 
 .summary h2 {
     color: var(--neutral-dark-gray-blue);
-    position: relative;
-    top: 0;
+    margin-bottom: 1;
     align-self: flex-start;
 
 
 }
 .all-stats{
+
+    width: 300px;
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
 
 }
 .stat {
@@ -165,7 +174,7 @@ h4 {
     display: flex;
     align-items: center;
 }
-.stat div i{
+.stat div img{
     
     margin-right: 10px;
     top: 2.5px;
@@ -219,12 +228,14 @@ h4 {
     background-color: var(--neutral-dark-gray-blue);
     color: var(--neutral-white);
 
-    padding: 15px;
+    padding-block: 10px;
     border-radius: 30px;
-    width: 300px;
+    
+    width: 250px;
 
     text-align: center;
     text-decoration: none;
+
    
 }
 
@@ -239,4 +250,29 @@ h4 {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    main{
+        
+        flex-direction: column;
+        padding: 0;
+    
+    }
+
+    .results {
+        width: fit-content;
+    }
+    .summary{
+        width: 100%;
+    }
+    .summary h2{
+        align-self: center;
+    }
+
+
+ 
 }
